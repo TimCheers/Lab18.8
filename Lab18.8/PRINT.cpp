@@ -38,7 +38,7 @@ PRINT& PRINT::operator=(const PRINT& other)
 void PRINT::Show() 
 {
 	cout << endl << "name:\t\t" << name;
-	cout << endl << "author:\t\t" << author;
+	cout << endl << "author:\t\t" << author << endl;
 }
 void PRINT::Input()
 {

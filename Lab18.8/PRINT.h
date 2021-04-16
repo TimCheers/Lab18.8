@@ -14,8 +14,8 @@ public:
 	string get_name() { return name; }
 	string get_author() { return author; }
 	PRINT& operator = (const PRINT& other);
-	void Show();
-	void Input();
+	void Show() override;
+	void Input() override;
 protected:
 	string name;
 	string author;

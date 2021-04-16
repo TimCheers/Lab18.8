@@ -141,11 +141,13 @@
   <ItemGroup>
     <ClCompile Include="BOOK.cpp" />
     <ClCompile Include="Lab18.8.cpp" />
+    <ClCompile Include="List.cpp" />
     <ClCompile Include="Obj.cpp" />
     <ClCompile Include="PRINT.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BOOK.h" />
+    <ClInclude Include="List.h" />
     <ClInclude Include="Obj.h" />
     <ClInclude Include="PRINT.h" />
   </ItemGroup>
