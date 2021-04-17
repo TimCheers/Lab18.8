@@ -2,6 +2,7 @@
 #include <string>
 #include "PRINT.h"
 #include "BOOK.h"
+#include "List.h"
 using namespace std;
 int main()
 {
@@ -9,11 +10,19 @@ int main()
 	
     PRINT* A = new PRINT;
     A->Input();
-    A->Show();
-
     BOOK* B = new BOOK;
     B->Input();
-    B->Show();
+    
+    List l(2);
+    Obj* p = A;
+    l.pushB(p);
+    p = B;
+    l.pushB(p);
+    l.show();
+    l.del();
+    cout << "\n---------------------------------------------------------\n";
+    cout << "\nsize: " << l.sizeList();
+    cout << "\n---------------------------------------------------------\n";
     return 0;
 }
 

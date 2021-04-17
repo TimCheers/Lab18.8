@@ -4,7 +4,7 @@
 #include "PRINT.h"
 #include "BOOK.h"
 using namespace std;
-int SafeInput(bool strict)
+int SafeInput1(bool strict)
 {
 	int result;
 	while (!(cin >> result) || (cin.peek() != '\n') || (strict && result <= 0)) {
@@ -36,7 +36,7 @@ void List::pushB()
 	int ch = -1;
 	while (ch<=0&&ch>=3)
 	{
-		ch = SafeInput(1);
+		ch = SafeInput1(1);
 		if (ch <= 0 && ch >= 3)
 		{
 			cout << "Введите корректное число!" << endl;
@@ -93,6 +93,19 @@ void List::show()
 		}
 	}
 }
+void List::pushB(Obj* p)
+{
+	if (pos < size)
+	{
+		beg[pos] = p;
+		pos++;
+	}
+	else
+	{
+		cout << "\nОшибка!\n";
+		return;
+	}
+}
 void List::del()
 {
 	if (size==0)
@@ -100,4 +113,5 @@ void List::del()
 		cout << "\nСписок пуст!\n";
 	}
 	pos--;
+	size--;
 }
