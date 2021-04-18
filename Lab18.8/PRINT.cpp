@@ -47,3 +47,17 @@ void PRINT::Input()
 	cout << endl << "author:\t\t";
 	cin >> author;
 }
+void PRINT::HandleEvent(const MyEvent& e)
+{
+	if (e.what == mesEvent)
+	{
+		switch (e.command)
+		{
+		case cmGet:
+			cout << "Èìÿ: " << get_name() << endl;
+			break;
+		default:
+			break;
+		}
+	}
+}

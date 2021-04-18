@@ -1,5 +1,6 @@
 #pragma once
 #include "Obj.h"
+#include "Event.h"
 class List
 {
 public:
@@ -10,7 +11,8 @@ public:
 	void del();
 	void show();
 	int sizeList() { return size; }
-private:
+	void HandleEvent(const MyEvent& e);
+protected:
 	int size;
 	Obj** beg;
 	int pos;

@@ -3,12 +3,12 @@
 #include "PRINT.h"
 #include "BOOK.h"
 #include "List.h"
+#include "Dialog.h"
 using namespace std;
 int main()
 {
     system("chcp 1251>nul");
-	
-    PRINT* A = new PRINT;
+    /*PRINT* A = new PRINT;
     A->Input();
     BOOK* B = new BOOK;
     B->Input();
@@ -22,7 +22,9 @@ int main()
     l.del();
     cout << "\n---------------------------------------------------------\n";
     cout << "\nsize: " << l.sizeList();
-    cout << "\n---------------------------------------------------------\n";
+    cout << "\n---------------------------------------------------------\n";*/
+    Dialog D(2);
+    D.Execute();
     return 0;
 }
 

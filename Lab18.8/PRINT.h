@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string>
 #include "Obj.h"
+#include "Event.h"
 using namespace std;
 class PRINT: public Obj
 {
@@ -16,6 +17,7 @@ public:
 	PRINT& operator = (const PRINT& other);
 	void Show() override;
 	void Input() override;
+	void HandleEvent(const MyEvent& e);
 protected:
 	string name;
 	string author;

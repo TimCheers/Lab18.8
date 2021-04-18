@@ -33,8 +33,8 @@ void List::pushB()
 {
 	Obj* p;
 	cout << "1) PRINT\t2)BOOK\n";
-	int ch = -1;
-	while (ch<=0&&ch>=3)
+	int ch = 0;
+	while (ch!=1&&ch!=2)
 	{
 		ch = SafeInput1(1);
 		if (ch <= 0 && ch >= 3)
@@ -51,7 +51,7 @@ void List::pushB()
 		{
 			beg[pos] = p;
 			pos++;
-			size++;
+			//size++;
 		}
 		else
 		{
@@ -66,9 +66,9 @@ void List::pushB()
 		p = tmp;
 		if (pos < size)
 		{
-			beg[pos] = p;
+			beg[pos] = p;///////////////////////////////////////////
 			pos++;
-			size++;
+			//size++;
 		}
 		else
 		{
@@ -114,4 +114,20 @@ void List::del()
 	}
 	pos--;
 	size--;
+}
+void List::HandleEvent(const MyEvent& e)
+{
+	int k = SafeInput1(1);
+	if (e.what == mesEvent)
+	{
+		Obj** p = beg;
+		for (int i = 0; i < size; i++)
+		{
+			if (i == k)
+			{
+				(*p)->HandleEvent(e);
+			}
+			p++;
+		}
+	}
 }
